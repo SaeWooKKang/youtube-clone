@@ -1,0 +1,60 @@
+header {
+  @include flex-center();
+  justify-content: space-between;
+  
+  border-bottom: 1.5px solid $line-color;
+  padding: 0 16px;
+  background-color: $white-color;
+  i{
+    color: $dark-grey-color;
+    font-size: 20px;
+    padding: 8px
+  }
+
+  .header-left{
+    @include flex-center();
+    height: 56px;
+    flex-shrink: 0;
+    
+    a{
+      //text-decoration: none;
+      @include colorAndFontSize($black-color,25px);
+      padding: 18px 15px;
+      
+      i{
+        @include colorAndFontSize($red-color,27px);
+        padding-right: 0;
+      }
+    }
+  }
+  .header-center{
+    @include flex-center();
+    
+    flex-grow: 1;
+    max-width: 575px;
+
+    button{
+      background-color: #fafafa;
+      border-radius: 50%;
+    };
+
+    input{
+      border: solid 1.5px #cccccc;
+      height: 30px;
+      font-size: 16px;
+      flex-grow: 1;
+      margin:0 10px 0 40px
+    }
+  }
+  .header-right{
+    @include flex-center();
+
+    button:last-child{
+      background-color: $profile-color;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      color: $light-grey-color;
+    }
+  }
+
+}

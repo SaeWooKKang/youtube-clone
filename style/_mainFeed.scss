@@ -1,0 +1,43 @@
+.main-section{
+  margin: 24px 0 0 20px;
+
+  .container {
+    @include flex-center();
+    flex-wrap: wrap;
+    
+  
+    > div{
+      margin: 0 0 10px 10px;
+      
+      img{
+        width: 280px;
+        height: 157px;
+        margin-bottom: 10px;
+        
+      }
+      .metadata{
+        display: flex;
+        .icon{
+          margin: 0 10px 0 0;
+        }
+        .data{
+          margin-left: 0;
+          .title{
+            font-size: $icon-title-size;
+            margin-bottom: 10px;
+          }
+          .channel{
+            font-size: $icon-sub-size;
+          }
+          .countAndTime{
+            font-size: $icon-sub-size;
+          }
+        }
+        img{
+          width:36px; height: 36px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

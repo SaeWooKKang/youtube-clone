@@ -1,0 +1,162 @@
+.vedioDetail-container{
+  margin-right: 20px;
+
+  $padding-Half:6px;
+  $padding:12px;
+  $padding-Double:24px;
+
+  /* font Size */
+  $xsmall-font:10px;
+  $small-font: 12px;
+  $medium-font: 14px;
+  $large-font: 18px;
+
+  @mixin colorAndFontSize($color,$fontsize) {
+    color:$color;
+    font-size:$fontsize;
+  }
+
+  li {
+      list-style-type: none;
+      padding-left: $padding;
+  }
+
+  /* Viedo */
+  .viedo {
+    @include flex-center();
+    margin-bottom: 15px;
+    
+    video {
+      width: 100%;
+      height: 100%;
+      max-width: 1000px;
+    }
+  }
+  /* MetaData */
+  .metaData {
+    color: $black-color;
+    padding:$padding-Double;
+    padding: 0;
+    .metaData_hashtags {
+      display: flex;
+      @include colorAndFontSize($blue-color,$xsmall-font);
+      margin-bottom:$padding;
+
+      li:first-child{
+        padding-left: 0;
+      }
+    }
+    .metaData_title {
+      font-size:$large-font;
+      margin-bottom:$padding;
+    }
+    .metaData_countAndBtns{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      .count{
+        @include colorAndFontSize($grey-color,$small-font);
+        @include flex-center;
+      }
+      .btns{
+        @include colorAndFontSize($grey-color,$large-font);
+        @include flex-center;
+        li {
+          margin-right:$padding;
+          padding-left: 0;
+        }
+        span{
+          font-size:$medium-font;
+        }
+      }
+    }   
+  }
+
+  /* Info */
+  .info {
+    margin: 0 ;
+    border-top: 0.5px solid $line-color;
+    border-bottom: 0.5px solid $line-color;
+    margin-bottom:$padding-Double;
+    padding:$padding 0;
+
+    .info_channel {
+      @include flex-center;
+  
+      .channel_btn {
+        margin-left: auto;
+        border: 0;
+        width: 60px;
+        height: 35px;
+        background-color:$red-color;
+        color: $white-color;
+      }
+      img {
+        margin-right:$padding;
+      }
+      .channel_name {
+        font-size:$medium-font;
+        margin: 0;
+      }
+      .channel_subscribers {
+        @include colorAndFontSize($grey-color,$xsmall-font);
+      }
+    }
+    img{
+      width: 48px; height: 48px;
+      border-radius: 50% ;
+    }
+    .info_Explanation {
+      font-size:$medium-font;
+      margin: 10px 60px 10px 60px;
+    }
+  }
+
+  /* Next Video */
+  .nextVideo {
+    padding:$padding-Double 0;
+
+    .nextVideo_container {
+      display: flex;
+      margin-bottom:$padding-Half;
+
+      img {
+        width:168px; height:94px;
+        margin-right:$padding-Half;
+      }
+      .metadata {
+        height:94px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title{
+          font-size:$medium-font;
+          margin-bottom:$padding;
+          
+        }
+        .channelName, .views{
+          font-size:$xsmall-font;
+          color:$grey-color;   
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1017px){
+
+    display: flex;
+    .right {
+      margin-left: 20px;
+      img{
+        width: 168px; height: 94px;
+      }
+      .metadata {
+        width: 202px;
+      } 
+      .nextVideo {
+        padding-left: 0;
+      }
+    }
+  }
+}

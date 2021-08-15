@@ -1,0 +1,35 @@
+// Color
+$light-grey-color:#f2f2f2;
+$dark-grey-color: #606060;
+$red-color: #ff0000;
+$black-color: #212121;
+$line-color:#e5e5e5;
+$profile-color: #33691e;
+$main-section-color: #f9f9f9;
+$white-color:#ffffff;
+$blue-color:#2186ff;
+$grey-color:#909090;
+$grey-light-color: #2e2e2e;
+
+$icon-title-size:18px;
+$icon-sub-size:14px;
+
+$padding-Half:6px;
+$padding:12px;
+$padding-Double:24px;
+
+/* font Size */
+$xsmall-font:10px;
+$small-font: 12px;
+$medium-font: 14px;
+$large-font: 18px;
+
+@mixin colorAndFontSize($color,$fontsize) {
+  color:$color;
+  font-size:$fontsize;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
