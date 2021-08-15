@@ -6,7 +6,7 @@
 
 <li> header와 main section으로 구분
 
-## css
+## scss
 
 <li>@import, @mixin, variable, 파일 parcials 사용
 
